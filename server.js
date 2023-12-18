@@ -33,6 +33,6 @@ app.post('/sendMail' ,(req,res)=>{
     
 })
 
-app.listen(2000 , ()=>{
-    console.log("SMTP Started at 2000")
+app.listen(process.env.PORT , ()=>{
+    console.log("SMTP Started")
 })
