@@ -6,6 +6,9 @@ var express = require('express');
 var app = express()
 app.use(express.json())
 app.use(cors({origin:"http://192.168.0.134:5173"}))
+app.get('/',(req,res)=>{
+    res.send('<h1>Working 😉</h1>')
+})
 app.post('/sendMail' ,(req,res)=>{
     console.log("Endpoint Called : /sendMail")
     try{
